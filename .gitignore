@@ -19,3 +19,6 @@
 
 # Executables
 *.out
+
+
+/workspace/
