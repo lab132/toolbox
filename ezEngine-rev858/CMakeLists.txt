@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 2.8)
 
 project ("ezEngine")
 
+include(../ezEngine_CopyToKrepel.cmake)
+
 message (STATUS "Adding SubDirectory 'Code'")
 add_subdirectory (${CMAKE_CURRENT_SOURCE_DIR}/Code)
 
