@@ -10,7 +10,7 @@ set(KREPEL_LIB_DIR "$ENV{KREPEL_DIR}/lib"
 
 list(GET KREPEL_EZ_TARGETS 0 EZ_TARGET)
 find_program(KREPEL_PY_EXE py)
-add_custom_target(CopyToKrepel
+add_custom_target(ezEngine_CopyToKrepel
                   COMMAND "${KREPEL_PY_EXE}" -3 "${CMAKE_SOURCE_DIR}/../ezEngine_CopyToKrepel.py"
                           --ezDir="${CMAKE_CURRENT_SOURCE_DIR}"
                           --ezBinDir="$<TARGET_FILE_DIR:${EZ_TARGET}>"
@@ -24,4 +24,4 @@ add_custom_target(CopyToKrepel
                           ${KREPEL_EZ_TARGETS}
                   COMMENT "Copying ezEngine files to krepel."
                   SOURCES "${CMAKE_SOURCE_DIR}/../ezEngine_CopyToKrepel.py")
-add_dependencies(CopyToKrepel ${KREPEL_EZ_TARGETS})
+add_dependencies(ezEngine_CopyToKrepel ${KREPEL_EZ_TARGETS})
