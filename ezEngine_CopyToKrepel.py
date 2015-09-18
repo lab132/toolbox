@@ -10,10 +10,10 @@ from distutils.file_util import copy_file
 
 
 suffixes = {
-  "Debug" : "-debug",
-  "MinSize" : "-minsize",
+  "Debug" :          "-debug",
+  "MinSizeRel" :     "-minsize",
   "RelWithDebInfo" : "-reldeb",
-  "Release" : "",
+  "Release" :        "",
 }
 
 bin_extenstions = [".exe", ".dll", ".pdb", ".so"]

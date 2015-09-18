@@ -1,11 +1,11 @@
 
-set(KREPEL_EZ_TARGETS ThirdParty Foundation Core
+set(KREPEL_EZ_TARGETS ThirdParty Foundation Core CoreUtils System
     CACHE STRING "The ezEngine compoenents to copy over.")
 set(KREPEL_EZ_CODE_DEST_DIR "$ENV{KREPEL_DIR}/code/ezEngine"
     CACHE PATH "Destination of the ezEngine source files.")
-set(KREPEL_BIN_DIR "$ENV{KREPEL_DIR}/output/bin"
+set(KREPEL_BIN_DIR "$ENV{KREPEL_DIR}/bin"
     CACHE PATH "Destination of the ezEngine binaries.")
-set(KREPEL_LIB_DIR "$ENV{KREPEL_DIR}/output/lib"
+set(KREPEL_LIB_DIR "$ENV{KREPEL_DIR}/lib"
     CACHE PATH "Destination of the ezEngine libraries.")
 
 list(GET KREPEL_EZ_TARGETS 0 EZ_TARGET)
@@ -25,4 +25,3 @@ add_custom_target(CopyToKrepel
                   COMMENT "Copying ezEngine files to krepel."
                   SOURCES "${CMAKE_SOURCE_DIR}/../ezEngine_CopyToKrepel.py")
 add_dependencies(CopyToKrepel ${KREPEL_EZ_TARGETS})
-

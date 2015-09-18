@@ -20,5 +20,15 @@
 # Executables
 *.out
 
+# Visual Studio files
+*.sdf
+*.suo
+*.user
+
+
+tmp/
+glew-*/bin/
+glew-*/lib/
+
 
 /workspace/
