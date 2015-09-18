@@ -1,7 +1,7 @@
 
 set(KREPEL_EZ_TARGETS ThirdParty Foundation Core CoreUtils System
     CACHE STRING "The ezEngine compoenents to copy over.")
-set(KREPEL_EZ_CODE_DEST_DIR "$ENV{KREPEL_DIR}/code/ezEngine"
+set(KREPEL_EZ_CODE_DEST_DIR "$ENV{KREPEL_DIR}/code"
     CACHE PATH "Destination of the ezEngine source files.")
 set(KREPEL_BIN_DIR "$ENV{KREPEL_DIR}/bin"
     CACHE PATH "Destination of the ezEngine binaries.")
