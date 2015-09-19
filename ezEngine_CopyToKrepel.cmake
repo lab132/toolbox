@@ -8,6 +8,11 @@ set(KREPEL_BIN_DIR "$ENV{KREPEL_DIR}/bin"
 set(KREPEL_LIB_DIR "$ENV{KREPEL_DIR}/lib"
     CACHE PATH "Destination of the ezEngine libraries.")
 
+set(CMAKE_DEBUG_POSTFIX          "-debug"   CACHE STRING "e.g. ezFoundation-debug.dll")
+set(CMAKE_MINSIZEREL_POSTFIX     "-minsize" CACHE STRING "e.g. ezFoundation-minsize.dll")
+set(CMAKE_RELWITHDEBINFO_POSTFIX "-reldeb"  CACHE STRING "e.g. ezFoundation-reldeb.dll")
+set(CMAKE_RELEASE_POSTFIX        ""         CACHE STRING "e.g. ezFoundation.dll (no postfix)")
+
 list(GET KREPEL_EZ_TARGETS 0 EZ_TARGET)
 find_program(KREPEL_PY_EXE py)
 add_custom_target(ezEngine_CopyToKrepel

@@ -76,14 +76,15 @@ def copy_code(*, src_path, dst_path, verbose, dry_run):
             dry_run=dry_run)
 
 
-def copy_output_files(*, targets, extensions, src_path, dst_path, dst_suffix, verbose, dry_run):
+def copy_output_files(*, targets, extensions, src_path, dst_path, suffix, verbose, dry_run):
   """Copy ezEngine binaries to krepel bin dir"""
   for target in targets:
     for ext in extensions:
-      src = src_path / "ez{}{}".format(target, ext)
+      file_name = "ez{}{}{}".format(target, suffix, ext)
+      src = src_path / file_name
       if not src.is_file():
         continue
-      dst = dst_path / "ez{}{}{}".format(target, dst_suffix, ext)
+      dst = dst_path / file_name
       if verbose:
         print("{} => {}".format(src.as_posix(), dst.as_posix()))
       mkpath(dst.parent.as_posix(),
@@ -108,14 +109,14 @@ def main():
                     extensions=bin_extenstions,
                     src_path=args.ezBinDir,
                     dst_path=args.krBinDir,
-                    dst_suffix=suffix,
+                    suffix=suffix,
                     verbose=args.verbose,
                     dry_run=args.dry_run)
   copy_output_files(targets=args.targets,
                     extensions=lib_extenstions,
                     src_path=args.ezLibDir,
                     dst_path=args.krLibDir,
-                    dst_suffix=suffix,
+                    suffix=suffix,
                     verbose=args.verbose,
                     dry_run=args.dry_run)
 
