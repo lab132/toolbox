@@ -6,6 +6,13 @@ set(DEFAULT_VERSION_EZ    "rev858")
 set(DEFAULT_VERSION_GLEW  "1.12.0")
 set(DEFAULT_VERSION_CATCH "v1.2.1-develop.12")
 
+get_filename_component(DEFAULT_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}" DIRECTORY)
+set(LAB132_TOOLBOX_INSTALL_PREFIX "${DEFAULT_INSTALL_PREFIX}"
+    CACHE PATH "The destination of the toolbox installation.")
+
+unset(CMAKE_INSTALL_PREFIX CACHE)
+set(CMAKE_INSTALL_PREFIX "${LAB132_TOOLBOX_INSTALL_PREFIX}")
+
 # ezEngine
 # ========
 set(LAB132_TOOLBOX_EZ ON CACHE BOOL "Whether to include the ezEngine in the installation.")

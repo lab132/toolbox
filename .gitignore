@@ -34,3 +34,6 @@ bin/
 lib/
 
 /workspace/
+
+# Ignore top-level code/ dir to enable installing to this directory.
+/code/
