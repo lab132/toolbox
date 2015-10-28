@@ -128,3 +128,6 @@ if(MAYBE_EXPORT)
       ${CMAKE_CURRENT_SOURCE_DIR}/CopyImportedTargetProperties.cmake
     DESTINATION lib/cmake/glew)
 endif()
+
+# Lab132 toolbox hook.
+include(../../../glew_hook.cmake)
