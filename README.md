@@ -29,7 +29,7 @@ Use CMake on the ezEngine path (e.g. `ezEngine-rev858`) to generate a build syst
 
 ## glew
 
-Use CMake on the glew path (e.g. `glew-1.12.0`) to generate a build system (e.g. Visual Studio) and execute the target `lab132Toolbox` there. It will automatically build all glew targets relevant for the toolbox.
+Use CMake on `<glew-path>/build/cmake` (`<glew-path> == glew-1.12.0` for example) to generate a build system (e.g. Visual Studio) and execute the target `lab132Toolbox` there. It will automatically build all glew targets relevant for the toolbox.
 
 ## Catch
 
