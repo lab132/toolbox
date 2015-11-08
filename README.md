@@ -13,13 +13,17 @@ Requirements:
 
 Platforms:
 
+The following is a list of CMake platform combinations that we officially support. You may try building other configurations, but there is no guarantee that they will work.
+
 | OS             | Build System           |
 | :------------- | :--------------------- |
 | Windows 10 x64 | Visual Studio 2015 x64 |
 
 # Libraries
 
-Library binaries are always built to `bin/` and `lib/` folders in the root of the respective projects. E.g. for ezEngine version `rev858`, the binary directories are `ezEngine-rev858/bin` and `ezEngine-rev858/lib`.
+YouLibrary binaries are always built to `bin/` and `lib/` folders in the root of the respective projects. E.g. for ezEngine version `rev858`, the binary directories are `ezEngine-rev858/bin` and `ezEngine-rev858/lib`.
+
+**Supported platforms you can use in CMake are listed above.&&
 
 _Tip for Visual Studio users: You can make use of `Build -> Batch Build...` to build multiple configurations._
 
